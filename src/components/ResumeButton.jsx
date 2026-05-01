@@ -6,7 +6,7 @@
 const ResumeButton = ({ className }) => {
   const handleResumeClick = () => {
     // Open the resume PDF in a new tab
-    window.open('/images/resume.pdf', '_blank');
+    window.open("/Pavan_AI_Engineer.pdf", "_blank");
   };
 
   return (

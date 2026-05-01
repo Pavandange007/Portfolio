@@ -58,8 +58,8 @@ const Hero = () => {
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Hi, I'm Rakshan, a Software Developer based in India with a passion for
-              building innovative solutions.
+              Hi, I'm Pavan Dange, an AI Software Engineer based in Mumbai specializing
+              in LLM orchestration and autonomous agentic workflows.
             </p>
 
             <div className="flex flex-row items-center gap-3 md:gap-6 pointer-events-auto">

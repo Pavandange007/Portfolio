@@ -10,6 +10,7 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
   const [form, setForm] = useState({
     user_name: "",
     user_email: "",
@@ -57,11 +58,20 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrorMessage(null);
     setLoading(true);
 
-    const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID || "service_lye51d1";
-    const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID || "template_wjbwf2o";
-    const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY || "7PfPCTSnd4gZ-Mgkk";
+    const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      setLoading(false);
+      setErrorMessage(
+        "Contact form is not configured. Please use the email button below, or try again later."
+      );
+      return;
+    }
 
     try {
       await emailjs.sendForm(
@@ -75,6 +85,7 @@ const Contact = () => {
       setForm({ user_name: "", user_email: "", message: "" });
     } catch (error) {
       console.error("EmailJS Error:", error);
+      setErrorMessage("Message failed to send. Please try again, or email me directly.");
     } finally {
       setLoading(false);
     }
@@ -97,6 +108,11 @@ const Contact = () => {
                   onSubmit={handleSubmit}
                   className="w-full flex flex-col gap-7"
                 >
+                  {errorMessage && (
+                    <div className="rounded-xl border border-rose-500/30 bg-rose-500/10 px-4 py-3 text-rose-200 text-sm">
+                      {errorMessage}
+                    </div>
+                  )}
                   <div>
                     <label htmlFor="user_name">Your name</label>
                     <input
@@ -155,7 +171,7 @@ const Contact = () => {
                   </div>
 
                   <a 
-                    href="mailto:rakshanch0004@gmail.com" 
+                    href="mailto:pavandange72@gmail.com"
                     className="flex-center w-full py-3 px-4 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors"
                   >
                     <img src="/images/logos/gmail.svg" alt="Gmail" className="w-8 h-8" />

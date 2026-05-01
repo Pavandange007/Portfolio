@@ -4,10 +4,6 @@ const navLinks = [
     link: "#experience",
   },
   {
-    name: "Work",
-    link: "#work",
-  },
-  {
     name: "Live",
     link: "#live-projects",
   },
@@ -33,9 +29,9 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 12, suffix: "+", label: "Months of Experience" },
-  { value: 6, suffix: "+", label: "Projects Completed" },
-  { value: 5, suffix: "+", label: "Technologies Mastered" },
+  { value: 18, suffix: "+", label: "Months of Experience" },
+  { value: 4, suffix: "+", label: "AI/Full-Stack Projects" },
+  { value: 15, suffix: "+", label: "Tools & Technologies" },
   { value: 100, suffix: "%", label: "Commitment to Quality" },
 ];
 
@@ -78,18 +74,18 @@ const logoIconsList = [
 const abilities = [
   {
     imgPath: "/images/seo.png",
-    title: "Full Stack Development",
-    desc: "Expertise in Java, Spring Boot, React.js, and modern web technologies for end-to-end solutions.",
+    title: "LLM Orchestration & Agents",
+    desc: "Builds production-grade agentic workflows (RAG, tool-use, automation) with modern LLM stacks (Gemini, Llama, Ollama).",
   },
   {
     imgPath: "/images/chat.png",
-    title: "Problem Solving",
-    desc: "Strong analytical skills with experience in building scalable applications and REST APIs.",
+    title: "AI + Full-Stack Delivery",
+    desc: "Bridges scalable MERN architecture with AI systems for real-world products: analytics engines, chatbots, and APIs.",
   },
   {
     imgPath: "/images/time.png",
-    title: "Continuous Learning",
-    desc: "Passionate about staying updated with latest technologies and best practices in software development.",
+    title: "Automation & MLOps",
+    desc: "Focus on shipping reliably: Docker, CI/CD, observability, vector databases, and efficient inference (vLLM/TGI).",
   },
 ];
 
@@ -151,53 +147,33 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review: "At Pluto Rides, I contributed to the development of cross-platform mobility applications and backend infrastructure supporting ride management and real-time driver operations.",
+    review:
+      "At Everymedia Technologies, I build AI-native systems across analytics, chatbots, and CV workflows—connecting LLMs with production web stacks to drive business intelligence.",
     imgPath: "/images/exp3.png",
     logoPath: "/images/logo3.png",
-    title: "Full Stack Developer",
-    company: "Pluto Rides",
-    date: "Jan 2026 - March 2026",
-    location: "Bengaluru, India",
+    title: "AI Engineer",
+    company: "Everymedia Technologies",
+    date: "June 2025 – Present",
+    location: "Mumbai, Maharashtra",
     responsibilities: [
-      "Contributed to cross-platform mobile application development using Kotlin Multiplatform (KMP) and Compose Multiplatform (CMP) for shared business logic across iOS and Android",
-      "Developed serverless backend APIs on AWS using Lambda and API Gateway to support ride and driver management workflows",
-      "Worked on PostgreSQL schema design for ride matching, driver tracking, and transaction management systems",
-      "Implemented real-time location tracking and Firebase Cloud Messaging (FCM) push notifications in customer and driver applications",
-      "Built a full-featured admin panel from scratch covering ride monitoring, driver verification, analytics, and operational controls",
-      "Implemented authentication and role-based authorization flows for customers, drivers, and administrators to ensure secure access management",
+      "Architected an AI-native social media analytics engine by orchestrating the Gemini API for automated sentiment analysis and campaign performance tracking",
+      "Engineered an autonomous intent-capturing chatbot using Ollama and PostHog for real-time behavioral analytics in 3D web environments",
+      "Developed a computer-vision media management system in Python for facial recognition and intelligent event segregation",
+      "Deployed a production-level stress analytics API for healthcare clients using Flask, integrating ML-based biometric data processing",
     ],
   },
   {
-    review: "At Qontact, I worked on building intelligent, data-driven web applications from scratch, contributing across frontend, backend, automation pipelines, and AI-powered features.",
+    review:
+      "At Octanet, I improved performance and reliability of React applications, focusing on responsive UI and better observability.",
     imgPath: "/images/exp1.png",
     logoPath: "/images/logo1.png",
-    title: "Full Stack Developer",
-    company: "QONTACT",
-    date: "May 2025 - Dec 2025",
-    location: "Toronto, Canada",
-    responsibilities: [
-      "Built a production-ready web application using Next.js 15 based on Figma designs, ensuring high performance and consistent cross-device user experience",
-      "Developed automated web scraping pipelines using FastAPI, Selenium, and BeautifulSoup, reducing manual data entry effort by 80%",
-      "Designed and implemented REST APIs using FastAPI to support business workflows and enable seamless frontend-backend communication",
-      "Created data transformation pipelines to convert scraped data into structured JSON schemas for downstream integrations",
-      "Integrated a Retrieval-Augmented Generation (RAG) based AI chatbot using LLM APIs and Pinecone vector database for context-aware responses from indexed documents",
-      "Participated in technical discussions and code reviews to maintain code quality and ensure timely delivery of features",
-    ],
-  },
-  {
-    review: "Rakshan demonstrated exceptional technical skills and delivered high-quality responsive websites for our NGO clients. His attention to detail and problem-solving approach significantly improved our project outcomes.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer Intern",
-    company: "WebSeva",
-    date: "September 2024 - December 2024",
+    title: "MERN Stack Developer Intern",
+    company: "Octanet Pvt Ltd",
+    date: "October 2024 – November 2024",
     location: "Remote",
     responsibilities: [
-      "Developed and launched responsive websites for NGOs using React.js, increasing user engagement and reducing bounce rates",
-      "Streamlined deployment process on Vercel with CI/CD pipeline, reducing deployment time and eliminating manual deployment errors",
-      "Engineered mobile-responsive layouts that improved mobile traffic and increased cross-device user retention",
-      "Added AI chat boxes customized for each website, enhancing user interaction and providing real-time assistance",
-      "Implemented structured code review protocols that enhanced code quality metrics and decreased post-release issues",
+      "Optimized web performance by implementing responsive React components and Redux, improving engagement by 35%",
+      "Implemented monitoring and troubleshooting practices that improved system observability and debugging efficiency by 40%",
     ],
   },
 ];
@@ -219,209 +195,130 @@ const expLogos = [
 
 const testimonials = [
   {
-    name: "Abhishek Kholiya",
-    mentions: "@abhishek_k",
+    name: "Hack MIT WPU Ideathon",
+    mentions: "Runner‑Up (2025)",
     review:
-      "Rakshan built a modern, accessible website for our NGO and handled end‑to‑end delivery – from responsive UI in React to deployment. Page load times improved dramatically and donations and volunteer sign‑ups increased thanks to clearer flows and an integrated chat assistant.",
-    imgPath: "👨🏽‍💻",
+      "Recognized for building and pitching a practical product solution with a strong technical approach and clear business impact.",
+    imgPath: "🏆",
   },
   {
-    name: "Venkat",
-    mentions: "@venkat_js",
+    name: "Evolve SaaS Hackathon",
+    mentions: "Special Recognition",
     review:
-      "Great communication and fast iterations. Rakshan built our Next.js frontend and set up a clean CI/CD pipeline (Vercel) along with code reviews that reduced deployment errors to zero. The final result was polished and delivered on time.",
-    imgPath: "👨🏽‍💼",
-  },
-  {
-    name: "Sarah Jenkins",
-    mentions: "@sarah_letxt",
-    review:
-      "Rakshan developed a high-performance corporate landing page for LetXT Enterprises. The SEO optimization and sleek responsive design dramatically improved our digital presence and client conversion rate.",
-    imgPath: "👩🏻‍💼",
-  },
-  {
-    name: "Amresh",
-    mentions: "@amresh_pluto",
-    review:
-      "At Pluto Rides, Rakshan contributed to our cross-platform mobile apps and serverless AWS backend. He helped us build a reliable, scalable system for ride matching that perfectly met our business requirements.",
-    imgPath: "👨🏽‍🦱",
-  },
-  {
-    name: "Wei Chen",
-    mentions: "@weichen_kmpleet",
-    review:
-      "Kmpleet needed a robust survey analytics platform. Rakshan delivered a flawless Next.js application with a FastAPI backend and integrated an AI chatbot that our users love. His attention to detail is outstanding.",
-    imgPath: "👨🏻‍💻",
-  },
-  {
-    name: "Yash",
-    mentions: "@yash_q",
-    review:
-      "Professional, responsive, and proactive. He anticipated edge cases for our immigration platform, added helpful monitoring, and left us with maintainable code and clear handover notes.",
-    imgPath: "🧔🏽",
+      "Awarded for execution quality and product thinking in a competitive build environment.",
+    imgPath: "🎖️",
   },
 ];
 
 const socialImgs = [
   {
-    name: "github",
-    imgPath: "/images/logos/git.svg",
-    link: "https://github.com/Rakshan0004",
-  },
-  {
-    name: "linkedin",
-    imgPath: "/images/linkedin.png",
-    link: "https://www.linkedin.com/in/rakshan-chintala-08965521a/",
-  },
-  {
-    name: "twitter",
-    imgPath: "/images/x.png",
-    link: "https://twitter.com/Rakshan_CH",
-  },
-  {
-    name: "instagram",
-    imgPath: "/images/insta.png",
-    link: "https://www.instagram.com/ch_rakshan/",
-  },
-  {
-    name: "leetcode",
-    imgPath: "/images/logos/leetcode.svg",
-    link: "https://leetcode.com/u/rakshanch0004/",
+    name: "email",
+    imgPath: "/images/logos/mail.svg",
+    link: "mailto:pavandange72@gmail.com",
   },
 ];
 
 const educationData = [
   {
-    degree: "B.Tech in Electronics and Communication Engineering",
-    institution: "Vellore Institute of Technology",
-    period: "March 2020 – May 2024",
-    gpa: "7.8/10",
-  },
-  {
-    degree: "Intermediate Education (MPC)",
-    institution: "FIITJEE Junior College",
-    period: "2018 – 2020",
-    gpa: "9.0/10",
-  },
-  {
-    degree: "Standard X",
-    institution: "FIITJEE Junior College",
-    period: "2017 – 2018",
-    gpa: "9.5/10",
+    degree: "B.Sc. in Computer Science",
+    institution: "MIT World Peace University (WPU), Pune",
+    period: "2022 – 2025",
+    gpa: "8.1/10",
   },
 ];
 
 const projects = [
   {
-    id: "ecommerce",
-    title: "Full-Stack E-Commerce Platform",
+    id: "stressanalyzer",
+    title: "StressAnalyzer: AI-Powered Mood & Biometric Analytics",
     description:
-      "A comprehensive e-commerce solution with product catalog, user auth, cart, and payment gateway integration. Built with Java 17, Spring Boot 3.3.3, MySQL, and Flyway migrations.",
+      "A production-level stress analytics API for healthcare use-cases, integrating ML-based biometric processing and exposing a clean API for client applications.",
     image: "/images/projectEC.png",
-    tags: ["Spring Boot", "Java 17", "MySQL", "Flyway", "REST API"],
-    githubUrl: "https://github.com/Rakshan0004",
+    tags: ["Python", "Flask", "ML", "API"],
+    githubUrl: null,
     demoUrl: null,
     featured: true,
   },
   {
-    id: "blockvote",
-    title: "BlockVote — Decentralized Voting",
+    id: "social-analytics",
+    title: "AI-Native Social Media Analytics Engine",
     description:
-      "A blockchain-based voting platform ensuring transparent, tamper-proof elections with smart contracts and a modern React frontend.",
+      "Automated sentiment analysis and campaign performance tracking by orchestrating the Gemini API for scalable, actionable insights.",
     image: "/images/block.png",
-    tags: ["Blockchain", "Solidity", "React", "Web3.js"],
-    githubUrl: "https://github.com/Rakshan0004",
+    tags: ["Gemini", "LLM", "Analytics", "Automation"],
+    githubUrl: null,
     demoUrl: null,
     featured: false,
   },
   {
-    id: "ai-agent",
-    title: "Customizable AI Agent",
+    id: "intent-chatbot",
+    title: "Autonomous Intent-Capturing Chatbot",
     description:
-      "A RAG-powered AI agent with tool-use capabilities. Connects to a Pinecone vector database for context-aware responses from custom document sets.",
+      "An agentic chatbot using Ollama and PostHog to capture intent and behavior signals in real time—designed for interactive, modern web experiences.",
     image: "/images/ai-agent.png",
-    tags: ["Python", "LangChain", "Pinecone", "FastAPI", "RAG"],
-    githubUrl: "https://github.com/Rakshan0004",
+    tags: ["Ollama", "Agents", "PostHog", "LLM"],
+    githubUrl: null,
     demoUrl: null,
     featured: false,
   },
   {
-    id: "immigration",
-    title: "Qontact — Immigration Consulting",
+    id: "musclemate",
+    title: "MuscleMate: Personalized Fitness Ecosystem",
     description:
-      "A production-ready Next.js 15 web application for a global immigration consulting firm, built from Figma designs with a FastAPI backend and AI chatbot.",
+      "A personalized fitness experience combining structured training journeys with smart recommendations to improve consistency and outcomes.",
     image: "/images/immigration_website.png",
-    tags: ["Next.js 15", "FastAPI", "RAG", "Pinecone", "Selenium"],
-    githubUrl: "https://github.com/Rakshan0004",
+    tags: ["MERN", "Product", "UX", "Personalization"],
+    githubUrl: null,
     demoUrl: null,
-    featured: false,
-  },
-  {
-    id: "kmpleet-survey",
-    title: "Kmpleet — Data Collection App",
-    description:
-      "Full-stack SaaS data collection and analytics platform with dynamic survey builder, real-time analytics dashboard, and AI-powered chatbot assistance.",
-    image: "/images/survay_website (1).png",
-    tags: ["Next.js", "FastAPI", "PostgreSQL", "React", "Vercel"],
-    githubUrl: "https://github.com/Rakshan0004",
-    demoUrl: "https://kmpleet.com/",
     featured: false,
   },
 ];
 
 const liveProjects = [
   {
-    id: "kmpleet",
-    title: "Kmpleet",
-    tagline: "Robust Data Collection & Analytics Platform",
+    id: "eventlo",
+    title: "EventHub",
+    tagline: "Event Web App",
     description:
-      "A full-stack SaaS platform for data collection, survey management, and real-time analytics. Built production-ready with Next.js 15 and a FastAPI backend.",
-    image: "/images/live-kmpleet.png",
-    tags: ["Next.js 15", "FastAPI", "PostgreSQL", "React", "Vercel"],
+      "A modern event web app built with Vite + React.",
+    image: "/images/live-eventlo.png",
+    tags: ["React", "Vite", "Web App"],
     links: [
-      { label: "Main App", url: "https://kmpleet.com/", icon: "globe" },
-      {
-        label: "Admin Panel",
-        url: "https://staging.admin.kmpleet.com/login",
-        icon: "admin",
-      },
+      { label: "Live App", url: "https://eventlo.netlify.app/", icon: "globe" },
     ],
-    featured: true,
+    featured: false,
   },
   {
-    id: "plutorides",
-    title: "Pluto Rides",
-    tagline: "Cross-Platform Ride Mobility Ecosystem",
+    id: "health-report-assistant",
+    title: "Health Report Assistant",
+    tagline: "Lab Report Summaries (PDF)",
     description:
-      "End-to-end ride mobility solution — cross-platform mobile app (iOS & Android), admin dashboard, and marketing website. Built with KMP, AWS Lambda, and Firebase.",
-    image: "/images/live-plutorides.png",
-    tags: ["Kotlin Multiplatform", "AWS Lambda", "PostgreSQL", "Firebase", "FCM"],
+      "Upload a lab report PDF to get clear summaries, flagged biomarkers, and a recommended specialist — with privacy-first processing.",
+    image: "/images/live-health-report.png",
+    tags: ["LLM", "PDF", "RAG", "Healthcare"],
     links: [
-      { label: "Website", url: "https://plutorides.com/", icon: "globe" },
-      { label: "Admin Panel", url: "https://admin.plutorides.com/", icon: "admin" },
       {
-        label: "Play Store",
-        url: "https://play.google.com/store/apps/details?id=com.pluto.rides&hl=en_IN",
-        icon: "android",
-      },
-      {
-        label: "App Store",
-        url: "https://apps.apple.com/in/app/pluto-reliable-commute/id6757488243",
-        icon: "apple",
+        label: "Live App",
+        url: "https://healthreportanalyst.onrender.com/",
+        icon: "globe",
       },
     ],
     featured: false,
   },
   {
-    id: "letxt",
-    title: "LetXT Enterprises",
-    tagline: "Corporate Landing Page",
+    id: "musclemate",
+    title: "MuscleMate",
+    tagline: "Personalized Fitness Ecosystem",
     description:
-      "A freelance project — high-performance, responsive corporate landing page. Deployed on Vercel with CI/CD, optimized for SEO and cross-device experience.",
-    image: "/images/live-letxt.png",
-    tags: ["React.js", "Vercel", "CI/CD", "SEO"],
+      "Fitness web app with BMI calculator, workout plans, and a supplement store — built as a complete, user-friendly experience.",
+    image: "/images/live-musclemate.png",
+    tags: ["React", "Fitness", "Web App"],
     links: [
-      { label: "Live Site", url: "https://letxenterprises.com/", icon: "globe" },
+      {
+        label: "Live App",
+        url: "https://musclematefitness.netlify.app/",
+        icon: "globe",
+      },
     ],
     featured: false,
   },

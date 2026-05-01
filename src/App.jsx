@@ -7,7 +7,6 @@ import Hero from "./sections/Hero";
 // Lazy load all other sections
 const FeatureCards = lazy(() => import("./sections/FeatureCards"));
 const Experience = lazy(() => import("./sections/Experience"));
-const ShowcaseSection = lazy(() => import("./sections/ShowcaseSection"));
 const LiveProjects = lazy(() => import("./sections/LiveProjects"));
 const LogoShowcase = lazy(() => import("./sections/LogoShowcase"));
 const TechStack = lazy(() => import("./sections/TechStack"));
@@ -38,11 +37,6 @@ const App = () => (
     {/* 3. Experience — strongest credential up front */}
     <Suspense fallback={<SectionLoader />}>
       <Experience />
-    </Suspense>
-
-    {/* 4. Projects — "here's what I built" */}
-    <Suspense fallback={<SectionLoader />}>
-      <ShowcaseSection />
     </Suspense>
 
     {/* 5. Live Projects — "these are actually running in production" */}

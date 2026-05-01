@@ -1,6 +1,6 @@
 import { Float, OrbitControls, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import * as THREE from "three";
 
 const TechIconCardExperience = ({ model }) => {
