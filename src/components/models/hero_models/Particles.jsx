@@ -3,10 +3,13 @@ import { useFrame } from "@react-three/fiber";
 
 const Particles = ({ count = 200 }) => {
   const mesh = useRef();
+  const stableCountRef = useRef(null);
+  if (stableCountRef.current === null) stableCountRef.current = count;
+  const stableCount = stableCountRef.current;
 
   const particles = useMemo(() => {
     const temp = [];
-    for (let i = 0; i < count; i++) {
+    for (let i = 0; i < stableCount; i++) {
       temp.push({
         position: [
           (Math.random() - 0.5) * 10,
@@ -17,17 +20,17 @@ const Particles = ({ count = 200 }) => {
       });
     }
     return temp;
-  }, [count]);
+  }, [stableCount]);
 
   const positions = useMemo(() => {
-    const pos = new Float32Array(count * 3);
+    const pos = new Float32Array(stableCount * 3);
     particles.forEach((p, i) => {
       pos[i * 3] = p.position[0];
       pos[i * 3 + 1] = p.position[1];
       pos[i * 3 + 2] = p.position[2];
     });
     return pos;
-  }, [particles, count]);
+  }, [particles, stableCount]);
 
   useFrame((state, delta) => {
     if (!mesh.current) return;
@@ -35,7 +38,7 @@ const Particles = ({ count = 200 }) => {
     const attr = mesh.current.geometry.attributes.position;
     const array = attr.array;
 
-    for (let i = 0; i < count; i++) {
+    for (let i = 0; i < stableCount; i++) {
       const idx = i * 3 + 1;
       let y = array[idx];
       // Use delta for frame-independent movement
@@ -54,7 +57,7 @@ const Particles = ({ count = 200 }) => {
       <bufferGeometry>
         <bufferAttribute
           attach="attributes-position"
-          count={count}
+          count={stableCount}
           array={positions}
           itemSize={3}
         />
