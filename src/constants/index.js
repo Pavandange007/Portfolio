@@ -276,6 +276,23 @@ const projects = [
 
 const liveProjects = [
   {
+    id: "wittymavericks",
+    title: "Witty Mavericks",
+    tagline: "Creative Digital Marketing Agency",
+    description:
+      "A premium, retro-themed digital marketing agency website featuring custom layouts, interactive widgets, and seamless user experiences.",
+    image: "/images/live-wittymavericks.png",
+    tags: ["Next.js", "React", "Tailwind CSS", "Aesthetics"],
+    links: [
+      {
+        label: "Live App",
+        url: "https://www.wittymavericks.com/",
+        icon: "globe",
+      },
+    ],
+    featured: false,
+  },
+  {
     id: "eventlo",
     title: "EventHub",
     tagline: "Event Web App",
